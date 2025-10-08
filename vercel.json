@@ -1,8 +1,15 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "api/weather.py", "use": "@vercel/python" }
+    {
+      "src": "api/*.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/weather", "dest": "/api/weather.py" }
+    {
+      "src": "/weather",
+      "dest": "api/server.py"
+    }
   ]
 }
